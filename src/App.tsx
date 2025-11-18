@@ -1,15 +1,16 @@
-import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import './index.css';
+//import Navbar from './components/Navbar';
+import Home from './pages/Home';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1 className='text-3xl text-gray border-red-500 px-10 py-3'>
-          HELLO
-        </h1>
-      </header>
-    </div>
+    <BrowserRouter>
+      {/*<Navbar/>*/}
+      <Routes>
+        <Route path='/portfolio' element={<Home/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
-export default App;
